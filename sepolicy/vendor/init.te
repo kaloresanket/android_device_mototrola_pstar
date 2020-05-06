@@ -21,3 +21,6 @@ recovery_only(`
   allow init self:capability sys_module;
   allow init rootfs:system module_load;
 ')
+
+#GCAM
+allow init adsprpcd_file:file mounton;
