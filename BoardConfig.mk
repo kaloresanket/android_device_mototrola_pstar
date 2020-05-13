@@ -8,6 +8,8 @@ BOARD_VENDOR := motorola
 DEVICE_PATH := device/motorola/pstar
 COMMON_PATH := device/qcom/common
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS +=
