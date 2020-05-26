@@ -1,7 +1,6 @@
 # Android fstab file.
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
-
 #TODO: Add 'check' as fs_mgr_flags with data partition.
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
@@ -20,7 +19,7 @@ product                                                 /product                
 /dev/block/bootdevice/by-name/bluetooth                 /vendor/bt_firmware      ext4    ro,nosuid,nodev,context=u:object_r:bt_firmware_file:s0 wait,slotselect
 /devices/platform/soc/*.ssusb/*.dwc3/xhci-hcd.*.auto*   /storage/usbotg          vfat    nosuid,nodev                                         wait,voldmanaged=usbotg:auto
 /dev/block/bootdevice/by-name/fsg                       /vendor/fsg              ext4    ro,nosuid,nodev,context=u:object_r:fsg_firmware_file:s0       wait,slotselect
-#/dev/block/bootdevice/by-name/spunvm                    /mnt/vendor/spunvm       vfat    rw,noatime,shortname=lower,uid=1000,gid=1000,dmask=007,fmask=007,context=u:object_r:spunvm_file:s0 wait
+#/dev/block/bootdevice/by-name/spunvm                    /mnt/vendor/spunvm       vfat    rw,noatime,shortname=lower,uid=1000,gid=1000,dmask=007,fmask=007,context=u:object_r:vendor_spunvm_file:s0 wait
 /dev/block/bootdevice/by-name/spunvm                    /mnt/vendor/spunvm       vfat    rw,noatime,shortname=lower,uid=1000,gid=1000,dmask=007,fmask=007 wait
 
 # Need to have this entry in here even though the mount point itself is no longer needed.
@@ -28,3 +27,4 @@ product                                                 /product                
 # and fails if it does not find it.
 /dev/block/bootdevice/by-name/misc                      /misc                    emmc    defaults                                             defaults
 /dev/block/zram0                                        none                     swap    defaults                                             zramsize=50%
+
