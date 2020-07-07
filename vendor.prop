@@ -8,6 +8,10 @@ dalvik.vm.heapminfree=8m
 dalvik.vm.heapsize=512m
 dalvik.vm.heapstartsize=16m
 dalvik.vm.heaptargetutilization=0.5
+
+# Display
+ro.surface_flinger.support_kernel_idle_timer=true
+
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.enable_advanced_sf_phase_offset=1
