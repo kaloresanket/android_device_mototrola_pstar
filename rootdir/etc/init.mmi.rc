@@ -6,28 +6,6 @@ import /vendor/etc/init/hw/init.mmi.overlay.rc
 
 # Moto USB configuration
 import /vendor/etc/init/hw/init.mmi.usb.rc
-# Moto debugging
-import /vendor/etc/init/hw/init.mmi.debug.rc
-
-# Moto diag_mdlog configuration
-import /vendor/etc/init/hw/init.mmi.diag_mdlog.rc
-
-import /vendor/etc/init/hw/init.oem.rc
-import /vendor/etc/init/hw/init.mmi.common.rc
-import /vendor/etc/init/hw/init.mmi.nonab.rc
-
-#Moto wlan configuration
-import /vendor/etc/init/hw/init.mmi.wlan.rc
-
-# Moto verified boot extension
-import /vendor/etc/init/hw/init.mmi.hab.rc
-
-# Test commands
-import /vendor/etc/init/hw/init.mmi.tcmd.rc
-
-# Carrier specific script
-import /vendor/etc/init/carrier/init.${ro.boot.carrier}.rc
-import /vendor/etc/init/carrier/init.default.rc
 
 on early-boot
     write /sys/module/subsystem_restart/parameters/disable_restart_work 0x0
@@ -41,12 +19,6 @@ on init
     chmod 0640 /sys/fs/pstore/dmesg-ramoops-0
     chown system log /proc/driver/mmi_annotate
     chmod 0640 /proc/driver/mmi_annotate
-
-on early-init && property:ro.bootmode=mot-factory
-    setprop ro.vendor.mot.factory true
-
-on early-init && property:ro.vendor.build.motfactory=1
-    setprop ro.vendor.mot.factory true
 
 on early-init
     # Need to wait for platform path for UTAGs driver to succeed
@@ -406,7 +378,7 @@ on property:vendor.hw.touch.status="dead"
 
 on property:vendor.hw.touch.status="ready"
     start vendor.touch-ready-sh
-    
+
 # Override the AOSP sensor HAL service definition
 # from hardware/interfaces/sensors/2.0/multihal
 # to add input and uhid group access
