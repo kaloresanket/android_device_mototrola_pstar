@@ -13,3 +13,7 @@ on early-init
 
 on property:dev.bootcomplete=1
     stop llkd-${ro.debuggable:-0}
+
+on property:ro.build.type=userdebug
+    setprop persist.vendor.qg.log_level 1
+
