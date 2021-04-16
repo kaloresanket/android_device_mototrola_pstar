@@ -118,6 +118,11 @@ persist.vendor.radio.sar_sensor=1
 persist.vendor.radio.sib16_support=1
 persist.vendor.radio.start_ota_daemon=0
 persist.vendor.radio.sw_mbn_update=0
+
+# Seamless transfer
+sys.fflag.override.settings_seamless_transfer=true
+
+# Sensors
 persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.sync_request=true
 persist.vendor.ssr.restart_level=ALL_ENABLE
