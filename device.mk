@@ -484,19 +484,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     telephony-ext
-
-# AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2376
-TARGET_SCREEN_WIDTH := 1080
-
-# Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
-
->>>>>>> b0dc079a... Pong: Setup A/B partitions and update_engine tools
+    
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
