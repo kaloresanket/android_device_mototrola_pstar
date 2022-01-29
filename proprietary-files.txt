@@ -2131,7 +2131,7 @@ vendor/lib64/motorola.hardware.vibrator@1.0.so
 vendor/lib64/vendor.qti.hardware.vibrator.impl.so
 
 # Vibrator firmware
-vendor/firmware/aw8695_rtp.bin
+vendor/firmware/aw8695_rtp.bin:recovery/root/vendor/firmware/aw8695_rtp.bin
 
 # Wi-Fi
 vendor/bin/hw/android.hardware.wifi@1.0-service
@@ -2612,7 +2612,7 @@ vendor/etc/wfd.hdcp.bin
 vendor/etc/wfdconfig.xml
 vendor/etc/xtra_root_cert.pem
 vendor/firmware/CAMERA_ICP.elf
-vendor/firmware/aw8695_haptic.bin
+vendor/firmware/aw8695_haptic.bin:recovery/root/vendor/firmware/aw8695_haptic.bin
 vendor/firmware/aw8695_rtp_Argo_Navis.bin
 vendor/firmware/aw8695_rtp_Attentive.bin
 vendor/firmware/aw8695_rtp_Awake.bin
