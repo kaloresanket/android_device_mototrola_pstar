@@ -7,6 +7,13 @@ dalvik.vm.dex2oat-Xmx=512m
 dalvik.vm.dex2oat-max-image-block-size=524288
 dalvik.vm.dex2oat-minidebuginfo=true
 dalvik.vm.dex2oat-resolve-startup-strings=true
+
+# Bluetooth
+persist.vendor.btstack.enable.twsplus=true
+persist.vendor.btstack.enable.twsplussho=true
+persist.vendor.bt.a2dp.hal.implementation=true
+
+# Dexopt
 dalvik.vm.dex2oat64.enabled=true
 dalvik.vm.dexopt.secondary=true
 dalvik.vm.dexopt.thermal-cutoff=2
