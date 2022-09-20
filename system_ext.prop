@@ -25,3 +25,4 @@ vendor.camera.aux.packagelist=com.motorola.camera2,com.motorola.camera3,com.moto
 vendor.camera.aux.packagelist2=com.motorola.ccc,com.android.settings,com.motorola.motointelligence
 vendor.mm.en.sec.smoothstreaming=false
 vendor.mm.enable.qcom_parser=33554978
+bluetooth.hardware.power.operating_voltage_mv=3300
