@@ -1513,6 +1513,15 @@ vendor/app/IWlanService/IWlanService.apk
 etc/permissions/privapp-permissions-qti.xml
 product/etc/permissions/telephony_product_privapp-permissions-qti.xml
 system_ext/etc/permissions/embms.xml
+product/etc/permissions/UimGba.xml
+product/etc/permissions/UimGbaManager.xml
+product/etc/permissions/UimService.xml
+product/etc/permissions/telephony_product_privapp-permissions-qti.xml
+product/framework/uimgbalibrary.jar
+product/framework/uimgbamanagerlibrary.jar
+product/framework/uimservicelibrary.jar
+system_ext/etc/permissions/com.qualcomm.location.xml
+system_ext/etc/permissions/privapp-permissions-qti-system-ext.xml
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml
 system_ext/etc/permissions/telephonyservice.xml
