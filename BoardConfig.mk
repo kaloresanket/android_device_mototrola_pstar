@@ -1,0 +1,122 @@
+#
+# Copyright (C) 2023 The LineageOS Project
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+BOARD_VENDOR := motorola
+
+DEVICE_PATH := device/motorola/pstar
+COMMON_PATH := device/qcom/common
+
+# A/B
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS +=
+	boot \
+    dtbo \
+    product \
+    system \
+    system_ext \
+    vbmeta \
+    vbmeta_system \
+    vendor \
+    vendor_boot
+
+# Architecture
+TARGET_ARCH := arm64
+TARGET_ARCH_VARIANT := armv8-2a-dotprod
+TARGET_CPU_ABI := arm64-v8a
+TARGET_CPU_ABI2 := 
+TARGET_CPU_VARIANT := cortex-a76
+
+
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv8-2a
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := cortex-a76
+
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
+
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := pstar
+TARGET_NO_BOOTLOADER := true
+
+# Display
+TARGET_SCREEN_DENSITY := 400
+TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x546C00000000
+TARGET_NO_RAW10_CUSTOM_FORMAT := true
+
+# Kernel
+BOARD_BOOTIMG_HEADER_VERSION := 3
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xa90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket reboot=panic_warm firmware_class.path=/vendor/firmware_mnt/image buildvariant=user
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_KERNEL_SEPARATED_DTBO := true
+TARGET_KERNEL_CONFIG := pstar_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/pstar
+
+# Kernel - prebuilt
+TARGET_FORCE_PREBUILT_KERNEL := true
+ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
+BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+BOARD_INCLUDE_DTB_IN_BOOTIMG := 
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
+BOARD_KERNEL_SEPARATED_DTBO := 
+endif
+
+# Partitions
+BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
+BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
+BOARD_DTBOIMG_PARTITION_SIZE := 25165824
+BOARD_USES_METADATA_PARTITION := true
+BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
+BOARD_SUPER_PARTITION_SIZE := 14227079168
+BOARD_SUPER_PARTITION_GROUPS := motorola_dynamic_partitions
+BOARD_MOTOROLA_DYNAMIC_PARTITIONS_PARTITION_LIST := product system system_ext vendor
+BOARD_MOTOROLA_DYNAMIC_PARTITIONS_SIZE := 7109345280
+
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 1073741824
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 898367488
+BOARD_SYSTEM_EXTIMAGE_PARTITION_RESERVED_SIZE := 1073741824
+BOARD_VENDORIMAGE_PARTITION_RESERVED_SIZE := 30720000
+
+TARGET_COPY_OUT_PRODUCT := product
+TARGET_COPY_OUT_SYSTEM_EXT := system_ext
+TARGET_COPY_OUT_VENDOR := vendor
+
+# Platform
+TARGET_BOARD_PLATFORM := kona
+
+# Properties
+TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
+
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+BOARD_USES_RECOVERY_AS_BOOT := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2023-07-01
+
+# Verified Boot
+BOARD_AVB_ENABLE := true
+BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
+
+# VINTF
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+
+# Inherit the proprietary files
+include vendor/motorola/pstar/BoardConfigVendor.mk
