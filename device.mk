@@ -431,6 +431,13 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.2-service-qti
 
+PRODUCT_PACKAGES += \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh
+
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/qcom/opensource/usb/etc
+
 # Vendor Service Manager
 PRODUCT_PACKAGES += \
     vndservicemanager
