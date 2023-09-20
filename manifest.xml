@@ -133,8 +133,7 @@
         <name>motorola.hardware.audio.adspd</name>
         <transport>hwbinder</transport>
     </hal>
-    <hal format="hidl">
-<<<<<<< HEAD
+    <hal format="hidl">e
         <name>motorola.hardware.camera.desktop</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::ICameraDesktop/default</fqname>
@@ -170,8 +169,6 @@
         <transport>hwbinder</transport>
     </hal>
     <hal format="hidl">
-=======
->>>>>>> a5e0416 (sm8250-common: Move NFC manifest entries to nfc SKU)
         <name>vendor.qti.data.factory</name>
         <transport>hwbinder</transport>
         <fqname>@2.2::IFactory/default</fqname>
