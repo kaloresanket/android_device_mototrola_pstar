@@ -18,6 +18,41 @@ PRODUCT_PACKAGES += \
     otapreopt_script
 
 # Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio-impl \
+    android.hardware.soundtrigger@2.3-impl
+
+PRODUCT_PACKAGES += \
+    audio.bluetooth.default \
+    audio.primary.kona \
+    audio.r_submix.default \
+    audio.usbv2.default \
+
+PRODUCT_PACKAGES += \
+    liba2dpoffload \
+    libaudiopreprocessing \
+    libbatterylistener \
+    libbundlewrapper \
+    libcomprcapture \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
+    libldnhncr \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libreverbwrapper \
+    libsndmonitor \
+    libspkrprot \
+    libvisualizer \
+    libvolumelistener
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/Bluetooth_split_audio_V1.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/Bluetooth_split_audio_V1.cfg \
     $(LOCAL_PATH)/configs/audio/MM_audio_playback_capture_v2.0.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/MM_audio_playback_capture_v2.0.cfg \
