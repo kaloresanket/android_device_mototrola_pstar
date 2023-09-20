@@ -11,7 +11,7 @@ COMMON_PATH := device/qcom/common
 # A/B
 AB_OTA_UPDATER := true
 AB_OTA_PARTITIONS +=
-	boot \
+    boot \
     dtbo \
     product \
     system \
