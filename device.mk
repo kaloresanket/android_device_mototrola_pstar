@@ -1,7 +1,7 @@
-# A/B
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 
+#Boot Control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.1-impl-qti \
     android.hardware.boot@1.1-impl-qti.recovery \
@@ -10,6 +10,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
+# A/B
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
@@ -484,6 +485,18 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# AAPT
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2376
+TARGET_SCREEN_WIDTH := 1080
+
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+>>>>>>> b0dc079a... Pong: Setup A/B partitions and update_engine tools
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
@@ -544,4 +557,3 @@ PRODUCT_BOOT_JARS += \
 
 # Inherit vendor
 $(call inherit-product, vendor/motorola/pstar/pstar-vendor.mk)
-
