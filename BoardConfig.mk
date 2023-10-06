@@ -6,7 +6,6 @@
 BOARD_VENDOR := motorola
 
 DEVICE_PATH := device/motorola/pstar
-COMMON_PATH := device/qcom/common
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
@@ -92,6 +91,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_SOURCE := kernel/motorola/sm8250
+TARGET_KERNEL_CONFIG := vendor/lineageos_pstar_defconfig
 
 # Kernel - prebuilt
 #TARGET_FORCE_PREBUILT_KERNEL := true
