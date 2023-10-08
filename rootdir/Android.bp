@@ -30,6 +30,18 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.mmi.block_perm.sh",
+    src: "bin/init.mmi.block_perm.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.oem.hw.sh",
+    src: "bin/init.oem.hw.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.qcom.post_boot.sh",
     src: "bin/init.qcom.post_boot.sh",
     vendor: true,
@@ -38,6 +50,12 @@ sh_binary {
 sh_binary {
     name: "init.qcom.sh",
     src: "bin/init.qcom.sh",
+    vendor: true,
+}
+
+sh_binary {
+    name: "init.mmi.touch.sh",
+    src: "bin/init.mmi.touch.sh",
     vendor: true,
 }
 
