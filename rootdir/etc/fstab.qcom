@@ -5,7 +5,6 @@
 #TODO: Add 'check' as fs_mgr_flags with data partition.
 # Currently we dont have e2fsck compiled. So fs check would failed.
 
-<<<<<<< HEAD
 #<src>                                                 <mnt_point>               <type>  <mnt_flags and options>                            <fs_mgr_flags>
 system                                                  /system                  ext4    ro                                                   wait,slotselect,avb=vbmeta_system,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey,logical,first_stage_mount
 system_ext                                              /system_ext              ext4    ro                                                   wait,slotselect,avb=vbmeta_system,logical,nofail,first_stage_mount
