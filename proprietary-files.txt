@@ -210,7 +210,7 @@ system_ext/lib64/motorola.hardware.camera.imgtuner@2.0.so
 system_ext/lib64/vendor.qti.hardware.seccam@1.0.so
 vendor/bin/hw/android.hardware.camera.provider@2.4-service_64
 vendor/bin/hw/motorola.hardware.camera.imgtuner@1.0-service
-vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc
+vendor/etc/init/android.hardware.camera.provider@2.4-service_64.rc:vendor/etc/init/android.hardware.camera.provider@2.4-service_64-moto.rc
 vendor/etc/init/motorola.hardware.camera.imgtuner@1.0-service.rc
 vendor/lib/camera/components/com.arcsoft.node.capturebokeh.so
 vendor/lib/camera/components/com.arcsoft.node.dc_capture.so
