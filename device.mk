@@ -218,6 +218,30 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc
 
+#Init Scripts
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.class_main.sh \
+    init.mdm.sh \
+    init.mmi.block_perm.sh \
+    init.mmi.charge_only.rc \
+    init.mmi.laser.sh \
+    init.mmi.chipset.rc \
+    init.mmi.overlay.rc \
+    init.mmi.rc \
+    init.mmi.touch.sh \
+    init.oem.fingerprint.overlay.sh \
+    init.oem.fingerprint2.sh \
+    init.oem.hw.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.qti.dcvs.sh \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    ueventd.qcom.rc
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -402,26 +426,6 @@ PRODUCT_COPY_FILES += \
 	
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := all
-
-# Ramdisk
-PRODUCT_PACKAGES += \
-    init.mmi.charge_only.rc \
-    init.mmi.chipset.rc \
-    init.mmi.debug.rc \
-    init.mmi.diag.rc \
-    init.mmi.diag_mdlog.rc \
-    init.mmi.overlay.rc \
-    init.mmi.rc \
-    init.mmi.tcmd.rc \
-    init.mmi.usb.rc \
-    init.mmi.wlan.rc \
-    init.qcom.factory.rc \
-    init.qcom.rc \
-    init.target.rc \
-    init.vendor.st21nfc.rc \
-    fstab.qcom \
-    fstab.qcom.zramwb \
-    ueventd.qcom.rc
 
 # RIL
 PRODUCT_PACKAGES += \
