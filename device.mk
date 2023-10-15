@@ -306,7 +306,6 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libc2dcolorconvert \
-    libmm-omxcore \
     libstagefrighthw
 
 # Overlays
