@@ -2673,8 +2673,8 @@ vendor/firmware/csot_stm_fts_production_limits.csv
 vendor/firmware/mot_dw9781c.prog
 vendor/firmware/st21nfc_fw.bin
 vendor/firmware/st21nfc_fw7.bin
-vendor/firmware/stmicro-csot-fts3639-21120227-de141027-pstar.ftb
-vendor/firmware/stmicro-visionox-fts3639-21072312-0009200c-pstar.ftb
+vendor/firmware/stmicro-csot-fts3639-21120227-de141027-pstar.ftb:recovery/root/vendor/firmware/stmicro-csot-fts3639-21120227-de141027-pstar.ftb
+vendor/firmware/stmicro-visionox-fts3639-21072312-0009200c-pstar.ftb:recovery/root/vendor/firmware/stmicro-visionox-fts3639-21072312-0009200c-pstar.ftb
 vendor/firmware/visionox_stm_fts_production_limits.csv
 vendor/firmware/wlanmdsp.otaupdate
 vendor/lib/btaudio_offload_if.so
