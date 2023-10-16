@@ -2380,7 +2380,6 @@ vendor/bin/mdm_helper_proxy
 vendor/bin/memtest_mode
 vendor/bin/mlid
 vendor/bin/mm-vidc-omx-test
-vendor/bin/motobox
 vendor/bin/motpsd
 vendor/bin/msm_irqbalance
 vendor/bin/mutualex
@@ -2609,7 +2608,6 @@ vendor/etc/st21nfc_conf_ds.txt
 vendor/etc/st21nfc_conf_ss.txt
 vendor/etc/system_properties.xml
 vendor/etc/user_dbg_bhd_gen.conf
-vendor/etc/vhw.xml
 vendor/etc/wfd.hdcp.bin
 vendor/etc/wfdconfig.xml
 vendor/etc/xtra_root_cert.pem
