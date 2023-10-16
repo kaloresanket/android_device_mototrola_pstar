@@ -2360,7 +2360,6 @@ vendor/bin/i2cget
 vendor/bin/i2cset
 vendor/bin/iconv
 vendor/bin/install
-vendor/bin/irsc_util
 vendor/bin/keymasterd
 vendor/bin/kpgather
 vendor/bin/kpreadwrite
