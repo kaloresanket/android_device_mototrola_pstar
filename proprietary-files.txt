@@ -513,6 +513,10 @@ vendor/lib64/vendor.qti.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so
 vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so
 
+# Camera (Permissions)
+product/etc/permissions/com.motorola.camera3.content.ai.xml
+product/etc/permissions/com.motorola.camera3.xml
+
 # Camera configs
 vendor/etc/camera/aec_golden_tele.bin
 vendor/etc/camera/arcsoft_calibration_u_dc.bin
@@ -649,14 +653,11 @@ vendor/bin/hw/android.hardware.memtrack@1.0-service
 vendor/bin/hw/com.motorola.hardware.display.panel@1.1-service
 vendor/bin/hw/com.motorola.hardware.display.touch@1.1-service
 vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/hw/vendor.qti.hardware.display.allocator-service
 vendor/etc/init/android.hardware.memtrack@1.0-service.rc
 vendor/etc/init/com.motorola.hardware.display.panel@1.1-service.rc
 vendor/etc/init/com.motorola.hardware.display.touch@1.1-service.rc
 vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/etc/init/vendor.qti.hardware.display.allocator-service.rc
 vendor/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.display.allocator-service.xml
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -714,15 +715,6 @@ vendor/lib/vendor.display.config@1.8.so
 vendor/lib/vendor.display.config@1.9.so
 vendor/lib/vendor.display.config@2.0.so
 vendor/lib/vendor.display.postproc@1.0.so
-vendor/lib/vendor.qti.hardware.display.allocator@1.0.so
-vendor/lib/vendor.qti.hardware.display.allocator@3.0.so
-vendor/lib/vendor.qti.hardware.display.mapper@1.0.so
-vendor/lib/vendor.qti.hardware.display.mapper@1.1.so
-vendor/lib/vendor.qti.hardware.display.mapper@2.0.so
-vendor/lib/vendor.qti.hardware.display.mapper@3.0.so
-vendor/lib/vendor.qti.hardware.display.mapper@4.0.so
-vendor/lib/vendor.qti.hardware.display.mapperextensions@1.0.so
-vendor/lib/vendor.qti.hardware.display.mapperextensions@1.1.so
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/egl/eglSubDriverAndroid.so
 vendor/lib64/egl/libEGL_adreno.so
@@ -785,16 +777,6 @@ vendor/lib64/vendor.display.config@1.8.so
 vendor/lib64/vendor.display.config@1.9.so
 vendor/lib64/vendor.display.config@2.0.so
 vendor/lib64/vendor.display.postproc@1.0.so
-vendor/lib64/vendor.qti.hardware.display.allocator@1.0.so
-vendor/lib64/vendor.qti.hardware.display.allocator@3.0.so
-vendor/lib64/vendor.qti.hardware.display.allocator@4.0.so
-vendor/lib64/vendor.qti.hardware.display.mapper@1.0.so
-vendor/lib64/vendor.qti.hardware.display.mapper@1.1.so
-vendor/lib64/vendor.qti.hardware.display.mapper@2.0.so
-vendor/lib64/vendor.qti.hardware.display.mapper@3.0.so
-vendor/lib64/vendor.qti.hardware.display.mapper@4.0.so
-vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.0.so
-vendor/lib64/vendor.qti.hardware.display.mapperextensions@1.1.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 
 # Display configs
@@ -1237,11 +1219,11 @@ vendor/etc/perf/targetresourceconfigs.xml
 vendor/etc/powerhint.xml
 vendor/lib/libperfconfig.so
 vendor/lib/libperfgluelayer.so
-vendor/lib/libqti-perfd-client.so
+#vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-util.so
 vendor/lib64/libperfconfig.so
 vendor/lib64/libperfgluelayer.so
-vendor/lib64/libqti-perfd-client.so
+#vendor/lib64/libqti-perfd-client.so
 vendor/lib64/libqti-util.so
 
 # Perf IOP
@@ -2087,7 +2069,7 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 # Miscellaneous
 odm/etc/vintf/manifest_d.xml
 vendor/app/CACertService/CACertService.apk
-vendor/app/com.qualcomm.qti.gpudrivers.kona.api30/com.qualcomm.qti.gpudrivers.kona.api30.apk
+vendor/app/com.qualcomm.qti.gpudrivers.kona.api30/com.qualcomm.qti.gpudrivers.kona.api30.apk;PRESIGNED
 vendor/bin/hw/capabilityconfigstoretest
 vendor/bin/hw/fpc_ident
 vendor/bin/hw/goodix_ident
