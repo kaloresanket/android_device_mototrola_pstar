@@ -133,7 +133,7 @@
         <name>motorola.hardware.audio.adspd</name>
         <transport>hwbinder</transport>
     </hal>
-    <hal format="hidl">e
+    <hal format="hidl">
         <name>motorola.hardware.camera.desktop</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::ICameraDesktop/default</fqname>
