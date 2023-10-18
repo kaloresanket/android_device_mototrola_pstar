@@ -37,7 +37,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.lvacfs.enable=true \
     ro.audio.monitorRotation=true \
     ro.audio.relative_volume=true \
-    ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural_wide_back \
     ro.config.vc_call_vol_steps=8 \
     ro.lmk.kill_heaviest_task=true \
     ro.qc.sdk.audio.fluencetype=none \
@@ -51,7 +50,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.snd_card.open.retries=50 \
     vendor.audio.use.sw.alac.decoder=false \
     vendor.audio.use.sw.ape.decoder=false \
-    vendor.audio_hal.period_size=240 \
+    vendor.audio_hal.period_size=240
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     bt.max.hfpclient.connections=1 \
@@ -77,11 +77,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.bluetooth.wipower=true \
     ro.vendor.bluetooth.wipower=false \
     vendor.bluetooth.soc=hastings \
-    vendor.qcom.bluetooth.soc=hastings \
-# CNE
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.feature=1 \
-    persist.vendor.cne.logging.qxdm=3974 \
+    vendor.qcom.bluetooth.soc=hastings
+
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=1 \
@@ -90,21 +87,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.aux.packagelist2=com.motorola.ccc,com.android.settings \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.motorola.camera2,com.motorola.camera3,com.motorola.motocit \
-    vendor.display.enable_camera_smooth=1 \
+    vendor.display.enable_camera_smooth=1
+
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.crypto.dm_default_key.options_format.version=2 \
-    ro.crypto.set_dun=true \
     ro.crypto.volume.filenames_mode=aes-256-cts \
-    ro.crypto.volume.metadata.method=dm-default-key \
+    ro.crypto.allow_encrypt_override=true
+
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dpm.feature=1 \
     persist.vendor.dpm.feature=11 \
-    persist.vendor.dpmhalservice.enable=1 \
+    persist.vendor.dpmhalservice.enable=1
+
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true \
+    drm.service.enabled=true
+
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=6 \
@@ -114,16 +113,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=512m \
     dalvik.vm.heapstartsize=16m \
     dalvik.vm.heaptargetutilization=0.5 \
-# FM
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.enable-fma2dp=true \
-    vendor.hw.fm.init=0 \
+    dalvik.vm.dex2oat64.enabled=true
+
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.frp.pst=/dev/block/bootdevice/by-name/frp \
-# FUSE
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.fuse_sdcard=true \
+    ro.frp.pst=/dev/block/bootdevice/by-name/frp
+
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=0 \
@@ -134,13 +129,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.high_fps_late_app_phase_offset_ns=1000000 \
     debug.sf.high_fps_late_sf_phase_offset_ns=-4000000 \
     debug.sf.hw=0 \
-    debug.sf.latch_unsignaled=1 \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
     persist.vendor.ims.display_delay=40 \
-    ro.build.display.id=T1RAS33.55-15-10-3 \
     ro.opengles.version=196610 \
-    ro.sf.lcd_density=400 \
     ro.vendor.product.display=motorola edge 20 pro \
     vendor.display.comp_mask=0 \
     vendor.display.disable_dynamic_sf_idle=1 \
@@ -159,7 +151,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.idle_time=0 \
     vendor.display.use_smooth_motion=1 \
     vendor.gralloc.disable_ubwc=0 \
-    vendor.opengles.version=196610 \
+    vendor.opengles.version=196610
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true \
@@ -175,14 +168,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.mm.enable.prefetch=true \
     persist.vendor.media.recorder.use4kColorMetadata=true \
     qcom.hw.aac.encoder=true \
-    ro.config.wallpaper=product/media/wallpapers/default_moto_wallpaper.jpg \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.kona.api30 \
-    ro.vendor.mot.base_buildid=T1RA33.55-15-10/72f29-aac78 \
     vendor.media.wfd.automode=1 \
     vendor.mm.en.sec.smoothstreaming=false \
     vendor.mm.enable.qcom_parser=135714 \
     vendor.mm.enable.qcom_parser=16777215 \
-    vendor.mm.enable.qcom_parser=63963135 \
+    vendor.mm.enable.qcom_parser=63963135
+
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
     config.disable_rtt=true \
@@ -201,10 +193,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rmnet.data.enable=true \
     persist.sys.bootupvolume=5 \
     persist.sys.force_sw_gles=1 \
-    persist.sys.sf.color_mode=0 \
+    persist.sys.sf.color_mode=9\
     persist.sys.sf.color_saturation=1.0 \
     persist.sys.sf.force_brightness_capability=1 \
-    persist.sys.sf.native_mode=1 \
+    persist.sys.sf.native_mode=2 \
     persist.vendor.ims.cam_sensor_delay=20 \
     persist.vendor.ims.disableDebugDataPathLogs=1 \
     persist.vendor.ims.disableDebugLogs=1 \
@@ -225,21 +217,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.board.first_api_level=30 \
     ro.board.platform=kona \
     ro.boot.dynamic_partitions=true \
-    ro.bootimage.build.date.utc=1688297315 \
-    ro.bootimage.build.date=Sun \
-    Jul \
-    06:28:35 \
-    CDT \
-    2023 \
-    ro.bootimage.build.fingerprint=motorola/pstar_retail/pstar:11/T1RAS33.55-15-10-3/e2b64:user/release-keys \
     ro.build.ab_update=true \
     ro.build.characteristics=nosdcard \
-    ro.build.description=pstar_retail-user \
-    e2b64 \
-    release-keys \
-    ro.build.id=T1RAS33.55-15-10-3 \
-    ro.config.ringtone_2=Moto.ogg \
-    ro.control_privapp_permissions=enforce \
     ro.fpsensor.position=2 \
     ro.gwfcactivation.disabled_carriers=1187,1492,1839 \
     ro.hardware.egl=adreno \
@@ -250,89 +229,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.lenovo.single_hand=1 \
     ro.lmk.kill_timeout_ms=15 \
     ro.mot.build.customerid=retail \
-    ro.mot.build.guid=dc4688a9434ad5f \
-    ro.odm.build.date.utc=1688297315 \
-    ro.odm.build.date=Sun \
-    ro.odm.build.fingerprint=motorola/pstar_retail/pstar:11/T1RAS33.55-15-10-3/e2b64:user/release-keys \
-    ro.odm.build.id=T1RAS33.55-15-10-3 \
-    ro.odm.build.tags=release-keys \
-    ro.odm.build.type=user \
-    ro.odm.build.version.incremental=e2b64 \
-    ro.odm.build.version.release=11 \
-    ro.odm.build.version.release_or_codename=11 \
-    ro.odm.build.version.sdk=30 \
-    ro.odm.product.cpu.abilist32=armeabi-v7a,armeabi \
-    ro.odm.product.cpu.abilist64=arm64-v8a \
-    ro.odm.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi \
     ro.opa.eligible_device=true \
     ro.postinstall.fstab.prefix=/product \
-    ro.product.board=pstar \
-    ro.product.build.date.utc=1688297315 \
-    ro.product.build.date=Sun \
-    ro.product.build.fingerprint=motorola/pstar_retail/pstar:11/T1RAS33.55-15-10-3/e2b64:user/release-keys \
-    ro.product.build.id=T1RAS33.55-15-10-3 \
-    ro.product.build.tags=release-keys \
-    ro.product.build.type=user \
-    ro.product.build.version.incremental=e2b64 \
-    ro.product.build.version.release=11 \
-    ro.product.build.version.release_or_codename=11 \
-    ro.product.build.version.sdk=30 \
     ro.product.gms_premier_tier=true \
-    ro.product.odm.brand=motorola \
-    ro.product.odm.device=pstar \
-    ro.product.odm.manufacturer=motorola \
-    ro.product.odm.model=motorola \
-    ro.product.odm.name=pstar_retail \
-    ro.product.product.brand=motorola \
-    ro.product.product.device=pstar \
-    ro.product.product.manufacturer=motorola \
-    ro.product.product.model=motorola \
-    ro.product.product.name=pstar_retail \
-    ro.product.property_source_order=product,product_services,odm,vendor,system \
-    ro.product.system_ext.brand=motorola \
-    ro.product.system_ext.device=pstar \
-    ro.product.system_ext.manufacturer=motorola \
-    ro.product.system_ext.model=motorola \
-    ro.product.system_ext.name=pstar_retail \
-    ro.product.vendor.brand=motorola \
-    ro.product.vendor.device=pstar \
-    ro.product.vendor.manufacturer=motorola \
-    ro.product.vendor.model=motorola \
-    ro.product.vendor.name=pstar_retail \
-    ro.product.vndk.version=30 \
     ro.recovery.ui.margin_height=100 \
     ro.sf.hwc_set_default_colormode=true \
     ro.soc.model=SM8250 \
     ro.surface_flinger.set_idle_timer_ms=250 \
     ro.surface_flinger.set_touch_timer_ms=1000 \
     ro.surface_flinger.use_smart_90_for_video=true \
-    ro.system.build.version.qcom=LA.QSSI.11.0.r1-16900-qssi.0 \
-    ro.system_ext.build.date.utc=1688297315 \
-    ro.system_ext.build.date=Sun \
-    ro.system_ext.build.fingerprint=motorola/pstar_retail/pstar:11/T1RAS33.55-15-10-3/e2b64:user/release-keys \
-    ro.system_ext.build.id=T1RAS33.55-15-10-3 \
-    ro.system_ext.build.tags=release-keys \
-    ro.system_ext.build.type=user \
-    ro.system_ext.build.version.incremental=e2b64 \
-    ro.system_ext.build.version.release=11 \
-    ro.system_ext.build.version.release_or_codename=11 \
-    ro.system_ext.build.version.sdk=30 \
     ro.treble.enabled=true \
-    ro.vendor.build.date.utc=1688297315 \
-    ro.vendor.build.date=Sun \
-    ro.vendor.build.id=T1RAS33.55-15-10-3 \
-    ro.vendor.build.security_patch=2023-07-01 \
-    ro.vendor.build.tags=release-keys \
-    ro.vendor.build.type=user \
-    ro.vendor.build.version.incremental=e2b64 \
-    ro.vendor.build.version.qcom=LA.UM.9.12.r1-14600-SMxx50.QSSI12.0 \
-    ro.vendor.build.version.release=11 \
-    ro.vendor.build.version.release_or_codename=11 \
-    ro.vendor.build.version.sdk=30 \
     ro.vendor.hw.gabutton=true \
-    ro.vendor.product.cpu.abilist32=armeabi-v7a,armeabi \
-    ro.vendor.product.cpu.abilist64=arm64-v8a \
-    ro.vendor.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi \
     ro.vendor.qspm.enable=true \
     sys.qca1530=detect \
     vendor.default.ext_panel_density=100 \
@@ -340,28 +247,31 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.hw.sf.IdleLazyResetThresholdT=1000 \
     vendor.pasr.activemode.enabled=true \
     vendor.power.pasr.enabled=true \
-    wifi.aware.interface=wifi-aware0 \
+    wifi.aware.interface=wifi-aware0
+
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.nfc.port=I2C \
-    ro.vendor.hw.nfc=st \
+    ro.vendor.hw.nfc=st
+
 # Netmgr
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.netmgrd.qos.enable=true \
     persist.vendor.data.mode=concurrent \
-    ro.vendor.use_data_netmgrd=true \
+    ro.vendor.use_data_netmgrd=true
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.vendor.perf-hal.ver=2.2 \
+    ro.vendor.perf-hal.ver=2.2
+    
 # QTI
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=QTI \
     ro.vendor.qti.va_aosp.support=1 \
-    ro.vendor.qti.va_odm.support=1 \
+    ro.vendor.qti.va_odm.support=1
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    DEVICE_PROVISIONED=1 \
     persist.data.df.agg.dl_pkt=10 \
     persist.data.df.agg.dl_size=4096 \
     persist.data.df.dev_name=rmnet_usb0 \
@@ -406,35 +316,29 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=22,22 \
     ro.telephony.default_network=27,27 \
     ro.vendor.radio.imei.sv=29 \
-    telephony.lteOnCdmaDevice=1 \
+    telephony.lteOnCdmaDevice=1
+
 # SSR
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.ssr.restart_level=ALL_ENABLE \
+    persist.vendor.ssr.restart_level=ALL_ENABLE
+
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.sensors.allow_non_default_discovery=true \
     persist.vendor.sensors.sync_request=true \
-    ro.vendor.sensors.glance_approach=false \
+    ro.vendor.sensors.glance_approach=false
+
 # Shutdown
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.vendor.shutdown.waittime=500 \
-# Thermal
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.hw.thermal_skin_val=front_temp \
-# Time
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.timed.enable=true \
-# UBWC
-PRODUCT_PROPERTY_OVERRIDES += \
+    sys.vendor.shutdown.waittime=500
+
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.usb.diag.func.name=diag \
-    vendor.usb.use_ffs_mtp=0 \
-# WFD
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0 \
+    vendor.usb.use_ffs_mtp=0
+
 # WLAN
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.data.iwlan.enable=true \
-    persist.vendor.sys.cnd.iwlan=1 \
+    persist.vendor.sys.cnd.iwlan=1
+
