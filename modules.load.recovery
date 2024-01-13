@@ -1,0 +1,5 @@
+mmi_annotate.ko
+mmi_info.ko
+mmi_relay.ko
+sensors_class.ko
+touchscreen_mmi.ko
