@@ -300,7 +300,8 @@ PRODUCT_COPY_FILES += \
 
 # MotoActions
 PRODUCT_PACKAGES += \
-    MotoActions
+    MotoActions \
+    MotoCommonOverlay
 
 # Namespaces
 PRODUCT_SOONG_NAMESPACES += \
