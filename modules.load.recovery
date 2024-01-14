@@ -3,3 +3,7 @@ mmi_info.ko
 mmi_relay.ko
 sensors_class.ko
 touchscreen_mmi.ko
+bq2597x_mmi.ko
+mmi_parallel_charger.ko
+mmi_parallel_charger_qc3p.ko
+stmicro_mmi.ko
