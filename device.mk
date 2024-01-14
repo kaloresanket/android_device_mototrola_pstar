@@ -433,6 +433,9 @@ PRODUCT_COPY_FILES += \
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := all
 
+# Quick tap
+TARGET_SUPPORTS_QUICK_TAP := true
+
 # RIL
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
