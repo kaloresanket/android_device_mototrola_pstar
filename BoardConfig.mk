@@ -65,6 +65,7 @@ TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := pstar
 TARGET_NO_BOOTLOADER := true
+TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 # Display
 TARGET_SCREEN_DENSITY := 400
@@ -86,7 +87,9 @@ TARGET_FS_CONFIG_GEN := \
     $(DEVICE_PATH)/mot_aids.fs
 
 #HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
+    $(DEVICE_PATH)/framework_compatibility_matrix.xml \
+    vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
 ODM_MANIFEST_SKUS += nfc
 ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/manifest_nfc.xml
