@@ -186,6 +186,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor \
     com.motorola.hardware.biometric.fingerprint@1.0.vendor
+    
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.hardware.fp.vendor=fpc,goodix \
+    ro.hardware.fp.sideCap=true
+    
+# FRP
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
