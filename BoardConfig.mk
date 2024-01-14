@@ -88,11 +88,15 @@ DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
 ODM_MANIFEST_SKUS += nfc
 ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/manifest_nfc.xml
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+BOARD_RAMDISK_USE_LZ4 := true
+
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_moto_kona
 
 # Kernel
-BOARD_BOOTIMG_HEADER_VERSION := 3
+BOARD_BOOT_HEADER_VERSION := 3
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0xa90000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=a600000.dwc3 swiotlb=2048 loop.max_part=7 cgroup.memory=nokmem,nosocket reboot=panic_warm firmware_class.path=/vendor/firmware_mnt/image
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_CMDLINE += kpti=off
@@ -198,7 +202,7 @@ TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_USES_RECOVERY_AS_BOOT := true
-TARGET_NO_RECOVERY := true
+BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 TARGET_USERIMAGES_USE_EXT4 := true
