@@ -319,6 +319,11 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor
 
+# Netflix
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.netflix.bsp_rev=Q8250-19134-1 \
+    ro.netflix.channel=004ee050-1a17-11e9-bb61-6f1da27fb55b
+
 # Neural networks
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor
