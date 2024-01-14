@@ -189,7 +189,7 @@ TARGET_BOARD_PLATFORM := kona
 BOARD_USES_QCOM_HARDWARE := true
 
 # Power
-TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
+TARGET_TAP_TO_WAKE_NODE := "/sys/devices/platform/soc/a94000.i2c/i2c-2/2-0049/double_click"
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
