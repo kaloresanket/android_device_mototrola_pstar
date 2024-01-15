@@ -105,16 +105,6 @@
         <fqname>@1.0::IMotoFingerPrintSensorTest/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>com.motorola.hardware.display.panel</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::IDisplayPanel/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>com.motorola.hardware.display.touch</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::IMotTouch/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IdpmQmi/dpmQmiService</fqname>
@@ -130,10 +120,6 @@
         <fqname>@2.3::IUceService/com.qualcomm.qti.uceservice</fqname>
     </hal>
     <hal format="hidl">
-        <name>motorola.hardware.audio.adspd</name>
-        <transport>hwbinder</transport>
-    </hal>
-    <hal format="hidl">
         <name>motorola.hardware.camera.desktop</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::ICameraDesktop/default</fqname>
@@ -143,30 +129,6 @@
         <name>motorola.hardware.camera.imgtuner</name>
         <transport>hwbinder</transport>
         <fqname>@1.0::IImageTuning/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>motorola.hardware.fdrcontrol</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.2::IFdrControl/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>motorola.hardware.health</name>
-        <transport>hwbinder</transport>
-        <fqname>@2.0::IMotHealth/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>motorola.hardware.vibrator</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.0::IMotVibrator/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>motorola.hardware.wifi.supplicant</name>
-        <transport>hwbinder</transport>
-        <fqname>@1.1::ISupplicantMot/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>motorola.hardware.wireless.powershare</name>
-        <transport>hwbinder</transport>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
