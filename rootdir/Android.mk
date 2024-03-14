@@ -23,8 +23,6 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := etc/init.oem.fingerprint2.sh
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR_EXECUTABLES)
 include $(BUILD_PREBUILT)
-<<<<<<< HEAD
-=======
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := init.mdm.sh
@@ -212,4 +210,3 @@ LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := ueventd.rc
 LOCAL_MODULE_PATH  := $(TARGET_OUT_VENDOR)
 include $(BUILD_PREBUILT)
->>>>>>> a9be244c (sm7250-common: Cleanup rootdir init scripts)

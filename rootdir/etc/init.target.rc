@@ -114,15 +114,12 @@ on boot
     chown system system /sys/module/kprofiles/parameters/kp_mode
     chmod 0660 /sys/module/kprofiles/parameters/kp_mode
 
-<<<<<<< HEAD
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
 
 on property:vendor.display.lcd_density=640
    setprop dalvik.vm.heapgrowthlimit 512m
 
-=======
->>>>>>> a9be244c (sm7250-common: Cleanup rootdir init scripts)
 on boot && property:persist.vendor.usb.controller.default=*
     setprop vendor.usb.controller ${persist.vendor.usb.controller.default}
 
@@ -160,14 +157,11 @@ service vendor.per_proxy /vendor/bin/pm-proxy
     group system
     disabled
 
-<<<<<<< HEAD
 service vendor.mdm_helper /vendor/bin/mdm_helper
     class core
     group log system wakelock diag vendor_rfs
     disabled
 
-=======
->>>>>>> a9be244c (sm7250-common: Cleanup rootdir init scripts)
 service vendor.mdm_launcher /vendor/bin/sh /vendor/bin/init.mdm.sh
     class core
     oneshot
@@ -177,20 +171,15 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
-<<<<<<< HEAD
+    
+on property:vold.decrypt=trigger_restart_framework
+   start vendor.cnss_diag
 
-on property:vendor.vold.post_fs_data_done=1 && property:ro.debuggable=1
-   start vendor.wlan_logging
-
-on property:vendor.vold.post_fs_data_done=1 && property:persist.wlan.debug_log=1
-   start vendor.wlan_logging
-
-service vendor.wlan_logging /system/vendor/bin/cnss_diag -q -f -b 128 -t HELIUM
+service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -b 128 -t HELIUM
    class main
    user system
    group system wifi inet sdcard_rw media_rw diag
    oneshot
-   disabled
 
 service dcvs-sh /vendor/bin/init.qti.dcvs.sh
     class late_start
@@ -201,5 +190,3 @@ service dcvs-sh /vendor/bin/init.qti.dcvs.sh
 
 on property:vendor.dcvs.prop=1
    start dcvs-sh
-=======
->>>>>>> a9be244c (sm7250-common: Cleanup rootdir init scripts)
