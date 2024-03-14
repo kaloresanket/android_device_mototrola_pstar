@@ -11,12 +11,6 @@ on early-boot
     write /sys/module/subsystem_restart/parameters/disable_restart_work 0x0
 
 on init
-    chown system log /sys/fs/pstore/console-ramoops-0
-    chmod 0440 /sys/fs/pstore/console-ramoops-0
-    chown system log /sys/fs/pstore/annotate-ramoops-0
-    chmod 0640 /sys/fs/pstore/annotate-ramoops-0
-    chown system log /sys/fs/pstore/dmesg-ramoops-0
-    chmod 0640 /sys/fs/pstore/dmesg-ramoops-0
     chown system log /proc/driver/mmi_annotate
     chmod 0640 /proc/driver/mmi_annotate
 
@@ -49,6 +43,7 @@ on early-init
     setprop ro.vendor.boot.bl_state ${ro.boot.bl_state}
     setprop ro.vendor.boot.serialno ${ro.boot.serialno}
     setprop ro.vendor.zygote ${ro.zygote}
+    setprop persist.radio.multisim.config ${persist.vendor.radio.multisim.config}
 
     # Make sure ro.boot.product.hardware.sku is set before hwservicemanager startup.
     setprop ro.boot.product.hardware.sku ${ro.vendor.product.hardware.sku.variant}
