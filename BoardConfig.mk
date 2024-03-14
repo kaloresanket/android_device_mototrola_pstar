@@ -112,7 +112,7 @@ BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_SOURCE := kernel/motorola/sm8250
-TARGET_KERNEL_CONFIG := vendor/lineageos_pstar_defconfig
+TARGET_KERNEL_CONFIG := vendor/lineageos_pstar_defconfig vendor/ext_config/pstar-default.config vendor/kona-perf_defconfig vendor/ext_config/moto-kona.config
 BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
 BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := \
     $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD) \
@@ -153,7 +153,7 @@ TARGET_MODULE_ALIASES += \
 
 # Kernel modules - WLAN
 TARGET_MODULE_ALIASES += \
-    wlan.ko:qca_cld3_wlan.ko
+    wlan.ko:qca_cld3_qca6390.ko
 
 # Partitions
 BOARD_USES_METADATA_PARTITION := true
