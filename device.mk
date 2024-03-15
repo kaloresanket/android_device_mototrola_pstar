@@ -335,11 +335,6 @@ PRODUCT_PACKAGES += \
     Tag \
     android.hardware.secure_element@1.2.vendor
 
-# NGA packages
-PRODUCT_PACKAGES += \
-    NgaResources \
-    nga
-
 # OMX
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
@@ -355,7 +350,8 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
 
@@ -539,8 +535,8 @@ PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+#PRODUCT_BOOT_JARS += \
+#    WfdCommon
 
 # Inherit vendor
 $(call inherit-product, vendor/motorola/pstar/pstar-vendor.mk)

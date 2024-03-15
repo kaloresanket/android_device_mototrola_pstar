@@ -165,7 +165,6 @@ ro.vendor.bluetooth.wipower=false
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.hw.nfc=st
 ro.vendor.hw.thermal_skin_val=front_temp
-ro.vendor.mot.base_buildid=T1RA33.55-15-10/72f29-aac78
 ro.vendor.perf-hal.ver=2.2
 ro.vendor.product.display=motorola edge 20 pro
 ro.vendor.qspm.enable=true
